@@ -1,6 +1,6 @@
 # MSE 800 — Professional Software Engineering
 
-TA small workspace containing class activities and example scripts for MSE 800 Professional Software Engineering
+A small workspace containing class activities and example scripts for MSE 800 Professional Software Engineering
 
 ## Week 1
 
