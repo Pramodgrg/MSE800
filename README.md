@@ -16,7 +16,7 @@ A small workspace containing class activities and example scripts for MSE 800 Pr
 
 [Week 2/bmi_edwards.py](Week%202/bmi_edwards.py): Enhanced version of Edward's BMI variant
 
-[Week 2/Word_G.py](Week%202/Word_G.py)
+[Week 2/Word_G.py](Week%202/Word_G.py): Word guessing game (OOP version)
 
 ## Usage
 
