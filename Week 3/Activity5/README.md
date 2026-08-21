@@ -15,6 +15,7 @@ that the business needs to track independently, and none of them can be
 safely folded into another without losing data integrity or history.
 
 ### `customers`
+
 Stores who the business is trading with: name, contact details, and a
 `national_id` (required for KYC/AML — currency exchange businesses are
 legally required to identify who they trade with). This has to be its own
@@ -24,6 +25,7 @@ would duplicate data and make it impossible to update a customer's details
 in one place.
 
 ### `currencies`
+
 A reference/lookup table of every currency the business handles (code, name,
 symbol, decimal precision, active flag). This is separated out so that
 currency data is defined **once** and referenced by ID everywhere else,
@@ -31,6 +33,7 @@ rather than re-typing "US Dollar" / "$" / "USD" as free text in every rate
 and transaction row (which would risk typos and inconsistent formatting).
 
 ### `exchange_rates`
+
 Rates are a **relationship between two currencies** (e.g. USD → EUR) that
 **changes over time**. This can't live inside `currencies` because a rate
 needs two currency references, not one, and a business needs to keep a
@@ -38,6 +41,7 @@ history of past rates for auditing — not just overwrite the latest one.
 Each row is one rate for one currency pair, effective at a point in time.
 
 ### `transactions`
+
 The core business event: a customer converting an amount of one currency
 into another. It records `rate_used` and both amounts **at the time of the
 trade**, rather than recalculating from `exchange_rates` later — this is
@@ -133,10 +137,8 @@ money-exchange-system/
 ├── tests/
 │   └── test_exchange.py       # unittest suite (stdlib only)
 └── diagrams/
-    ├── er_diagram.dot          # Graphviz source
-    ├── er_diagram.png          # rendered diagram
-    ├── er_diagram.svg
-    └── er_diagram.mmd          # Mermaid source (renders on GitHub)
+    └── er_diagram.png          # rendered diagram
+
 ```
 
 ## 4. OOP design
@@ -192,11 +194,3 @@ with Database("exchange.db") as db:
     tx = service.exchange(customer_id=alice.customer_id, from_code="USD", to_code="EUR", from_amount=500)
     print(tx)  # Transaction#1 customer=1 500 -> 460.0 @ 0.92 [COMPLETED]
 ```
-
-## Future Improvements
-
-- `staff` table to track which employee processed each transaction
-- `branches` table for multi-location businesses
-- Multi-currency wallet/balance tracking per customer
-- REST API layer (FastAPI/Flask) on top of `ExchangeService`
-- Swap SQLite for PostgreSQL for concurrent multi-user access
