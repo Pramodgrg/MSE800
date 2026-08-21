@@ -1,6 +1,5 @@
 # Week 2 - Activity 3: Data Types with Description
 
-
 class Student:
     """
     This class represents one student.
@@ -62,14 +61,23 @@ def main():
 
     # sorted() creates a new list sorted according to the student's age.
     # key=lambda student: student.age tells Python to sort by age.
-    sorted_students = sorted(students, key=lambda student: student.age)
+    sorted_students_age = sorted(students, key=lambda student: student.age)
+
+    sorted_students_id = sorted(students, key=lambda student: student.student_id)
 
     print("\n===== STUDENTS SORTED BY AGE =====")
 
     # Display each student after sorting.
-    for student in sorted_students:
+    for student in sorted_students_age:
         student.display_information()
 
+
+    print("\n===== STUDENTS SORTED BY ID =====")
+
+
+    # Display each student after sorting.
+    for student in sorted_students_id:
+        student.display_information()
 
 # This checks whether this Python file is being run directly.
 if __name__ == "__main__":

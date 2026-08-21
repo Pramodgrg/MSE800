@@ -1,0 +1,13 @@
+A student entity with attributes F_name, L_name, NID and B_date, 
+enrolls enrollment entity with attributes student code, Date_of_Enrollemnt, 
+course name and CC#. There is a many to many relationship between student and enrollment.
+A student entity can also enroll lectures 
+entity with attributes time, date lecture_name, subject and CC#
+A lecturer lectures subjects. There is a many to many relationship between lecturer and subject.
+
+add more one/ two attributes for any of the entities?
+
+
+
+Write the type of relationship between the entities and describe it.
+
