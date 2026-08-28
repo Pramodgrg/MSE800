@@ -8,6 +8,10 @@
 
 ![Use Case Diagram](use_case_diagram_optimized.svg)
 
-## Class Diagram For money Exchnage System Week-4 Activity 3
+## Activity Diagram Money Exchange System Week-4 Activity 2
+
+![Activity Diagram](activity_diagram_money_exchange_system.svg)
+
+## Class Diagram For Money Exchnage System Week-4 Activity 3
 
 ![Class Diagram](class_diagram_money_exchange_system.svg)
