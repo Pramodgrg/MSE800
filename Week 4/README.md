@@ -7,3 +7,7 @@
 ## Use Case Diagram For Money Exchange System Week-4 Activity 1.2
 
 ![Use Case Diagram](use_case_diagram_optimized.svg)
+
+## Class Diagram For money Exchnage System Week-4 Activity 3
+
+![Class Diagram](class_diagram_money_exchange_system.svg)
