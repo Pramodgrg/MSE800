@@ -8,13 +8,13 @@
 
 In this use case diagram there are two actors interacting with the system and the actors are Student and Lecturer. The two actors are interacting with the system.
 
-Student(actor) interacts with the system to:
--Enroll Courses
--Submit Assignments
+Student(actor) interacts with the system to:<br>
+-Enroll Courses<br>
+-Submit Assignments<br>
 -View Grades
 
-Lecturer(actor) interacts with the system to:
--Assign assignments
+Lecturer(actor) interacts with the system to:<br>
+-Assign assignments<br>
 -View Completed assignments and Assign grades
 
 ## Activity Diagram Student Management System Week-5 Activity 2
